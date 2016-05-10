@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<style>
+body
+{
+    background-color:#59727e;
+}
+h3
+{
+    background-color:132734;
+    line-height:2.3;
+    opacity: 0.5;
+    color: white;
+}
+#num1
+ {
+    width: 200px;
+   height: 30px;
+    border: solid 2px #132734;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+   background-color: #FFFFFF;
+    color: #474747;
+  font-family: TimesNewRoman;
+ }
+ #num2
+ {
+    width: 200px;
+   height: 30px;
+    border: solid 2px #132734;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+   background-color: #FFFFFF;
+    color: #474747;
+  font-family: TimesNewRoman;
+ }
+ #num3
+ {
+    width: 200px;
+   height: 30px;
+    border: solid 2px #132734;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+   background-color: #FFFFFF;
+    color: #474747;
+  font-family: TimesNewRoman;
+ }
+ .btn {
+ 	background-color:#599bb3;
+ 	border-radius:8px;
+ 	display:inline-block;
+ 	color:#ffffff;
+ 	font-family:Arial;
+ 	font-size:15px;
+ 	font-weight:bold;
+ 	padding:5px 9px;
+ 	text-decoration:none;
+ 	text-shadow:0px 1px 0px #3d768a;
+ }
+</style>
+<head>
+<title>
+</title>
+<h3><center>Simple Calculator</center></h3>
+</head>
+<body>
+<form name="calculator">
+<center>
+<input type="" id="num1" placeholder="Enter Number:"> <br><br>
+<input type="" id="num2" placeholder="Enter Operation:"> <br><br>
+<input type="" id="num3" placeholder="Enter Number:"> <br><br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="BUTTON" class="btn" value="Compute"  onclick="compute()"></center>
+</form>
+<script>
+function compute()
+{
+ var ans = "0";
+    var  n1= document.getElementById("num1").value;
+    var n2= document.getElementById("num2").value;
+    var n3= document.getElementById("num3").value;
+    if(n2 === "+")
+    {
+        ans = parseInt(n1) + parseInt(n3);
+        document.getElementById("num1").value = ans;
+        document.getElementById("num2").value = "";
+        document.getElementById("num3").value = "";
+    }
+    else if(n2 === "-")
+    {
+        ans = parseInt(n1) - parseInt(n3);
+        document.getElementById("num1").value = ans;
+        document.getElementById("num2").value = "";
+        document.getElementById("num3").value = "";
+
+    }
+    else if(n2 === "*")
+    {
+        ans = parseInt(n1) * parseInt(n3);
+
+        document.getElementById("num1").value = ans;
+        document.getElementById("num2").value = "";
+        document.getElementById("num3").value = "";
+    }
+    else if(n2 === "/")
+    {
+       ans = parseInt(n1)/parseInt(n3);
+        document.getElementById("num1").value = ans;
+        document.getElementById("num2").value = "";
+        document.getElementById("num3").value = "";
+    }
+}
+</script>
+</body>
+</html>
